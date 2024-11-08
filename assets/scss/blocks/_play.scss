@@ -1,0 +1,143 @@
+.play {
+    background-color: $primary-color;
+
+    &::before {
+        content: "";
+        background-image: url("../img/play/decor.png");
+
+        height: 70px;
+        width: 100%;
+        display: block;
+    }
+
+    &::after {
+        content: "";
+        background-image: url("../img/play/decor_bottom.png");
+
+        height: 70px;
+        width: 100%;
+        display: block;
+    }
+
+    &__promotion {
+        width: 62px;
+        height: 62px;
+        margin-bottom: -10px;
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 70px;
+    }
+
+    &__info {
+        order: 1;
+    }
+
+    &__info-content {
+        margin-bottom: 70px;
+
+        & h2 {
+            @extend %title-style;
+
+            margin-bottom: 25px;
+            color: $white;
+        }
+
+        & p {
+            line-height: 200%;
+            color: $white;
+        }
+    }
+
+    &__images {
+        display: flex;
+        column-gap: 32px;
+        padding-bottom: 25px;
+
+        & img {
+            max-width: 132px;
+        }
+    }
+
+    .info__form {
+        margin-bottom: 70px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .play {
+        &__body {
+            flex-direction: row;
+            column-gap: 32px;
+        }
+
+        &__info {
+            flex: 50%;
+            order: 0;
+        }
+
+        &__info-content {
+            p {
+                font-size: 18px;
+            }
+        }
+
+        &__images {
+            flex-direction: column;
+            flex: 50%;
+            margin-top: -65px;
+
+            & img:nth-child(2) {
+                margin-top: -51px;
+            }
+
+            & img {
+                max-width: 460px;
+            }
+        }
+
+        &__promotion {
+            margin-bottom: 15px;
+            width: 132px;
+            height: 132px;
+        }
+    }
+}
+
+@media (min-width: 1920px) {
+    .play {
+        &__body {
+            padding-top: 220px;
+            position: relative;
+        }
+
+        &__info {
+            flex: 35%;
+        }
+
+        &__info-content {
+            position: absolute;
+            top: 0;
+        }
+
+        &__images {
+            position: relative;
+            flex-direction: row;
+            flex: 65%;
+
+            & img:nth-child(1) {
+                position: relative;
+                z-index: 2;
+            } 
+
+            & img:nth-child(2) {
+                margin-top: 0;
+                margin-left: -173px;
+            }
+        }
+    }
+}
+        
+        

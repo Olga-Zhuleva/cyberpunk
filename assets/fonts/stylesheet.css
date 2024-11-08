@@ -1,0 +1,6 @@
+@font-face {
+    font-family: "Archangelsk";
+    src: local("Archangelsk"), url("/fonts/Archangelsk.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}

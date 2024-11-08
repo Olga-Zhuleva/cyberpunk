@@ -1,0 +1,26 @@
+//colors
+
+$color-accent: #f8f200;
+$primary-color: #000;
+$gray-text: #777;
+$blue-text: #52bedc;
+$white: #fff;
+
+//font-family
+
+$font-family: "Roboto", sans-serif;
+$second-family-text: "Archangelsk";
+
+//шаблоны
+
+%title-style {
+    font-family: $second-family-text;
+    font-size: 30px;
+    // text-align: center;
+    color: $primary-color;
+
+    @media(min-width: 1024px) {
+        font-size: 62px;
+    }
+}
+

@@ -1,0 +1,88 @@
+.nightSity {
+    margin-bottom: 70px;
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        row-gap: 65px;
+    }
+    &__info {
+        & h2 {
+            @extend %title-style;
+
+            padding-top: 44px;
+            text-align: left;
+        }
+
+        & p {
+            padding-top: 25px;
+            font-family: $font-family;
+            line-height: 200%;
+            color: $gray-text;
+        }
+    }
+    &__image {
+        display: grid;
+        row-gap: 32px;
+        column-gap: 32px;
+        justify-content: center;
+    }
+}
+
+@media (min-width: 1024px) {
+    .nightSity {
+        &__info {
+
+            & h2 {
+                max-width: 640px;
+
+            }
+
+            & p {
+                font-size: 18px;
+                max-width: 788px;
+            }
+        }
+
+        &__image {
+            grid-template-columns: 460px 460px;
+            justify-content: center;
+
+            & :nth-child(3) {
+                grid-row: 2;
+                grid-column: 1 / 3;
+            }
+        }
+    }
+}
+
+@media (min-width: 1440px) {
+    .nightSity {
+        &__image {
+            grid-template-columns: auto auto;
+            grid-template-rows: auto auto;
+            grid-auto-flow: column;
+        }
+
+        &__image :nth-child(3) {
+            grid-column: 2 / 4;
+            grid-row: span 2;
+        }
+    }
+}
+
+@media (min-width: 1920px) {
+    .nightSity {
+        &__info {
+
+            & h2 {
+                max-width: none;
+
+            }
+
+            & p {
+                max-width: none;
+            }
+        }
+    }
+}

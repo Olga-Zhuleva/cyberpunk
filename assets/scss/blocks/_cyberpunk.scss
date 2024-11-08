@@ -1,0 +1,140 @@
+.cyberpunk {
+    padding-bottom: 70px;
+    background-color: $primary-color;
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+    }
+    &__image {
+        margin-inline: -12px;
+
+        img {
+            width: 100%;
+        }
+    }
+    &__info {
+        & h2 {
+            @extend %title-style;
+
+            padding-top: 40px;
+            padding-bottom: 25px;
+            color: $white;
+        }
+
+        & p {
+            padding-bottom: 20px;
+            font-weight: 700;
+            font-size: 20px;
+            color: $blue-text;
+        }
+    }
+    &__set {
+        ul {
+            display: flex;
+            flex-direction: column;
+            row-gap: 15px;
+            padding-bottom: 40px;
+
+            li {
+                display: flex;
+                align-items: center;
+                column-gap: 15px;
+                color: $white;
+            }
+
+            & :nth-child(n)::before {
+                content: "";
+                background-repeat: no-repeat;
+                display: inline-block;
+                width: 24px;
+                height: 24px;
+            }
+
+            & :nth-child(1)::before {
+                background-image: url("../img/cyberpunk/disk.png");
+            }
+
+            & :nth-child(2)::before {
+                background-image: url("../img/cyberpunk/wysiwyg.png");
+            }
+
+            & :nth-child(3)::before {
+                background-image: url("../img/cyberpunk/collections.png");
+            }
+        }
+    }
+    &__platform {
+        & img {
+            width: auto;
+        }
+    }
+
+    &__playing {
+        display: grid;
+        grid-template-columns: 62px 1fr;
+        gap: 56px 40px;
+    }
+}
+
+@media (min-width: 768px) {
+    .cyberpunk {
+        &__image {
+            margin-inline: 0;
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .cyberpunk {
+        padding-bottom: 0;
+
+        &__playing {
+            gap: 79px 47px;
+        }
+
+        &__body {
+            flex-direction: row;
+        }
+
+        &__image {
+            flex: 32%;
+            max-height: 717px;
+            overflow: hidden;
+        }
+
+        &__info {
+            padding-left: 32px;
+            flex: 68%;
+
+            h2 {
+                padding-top: 70px;
+                max-width: 624px;
+            }
+
+            font-size: 24px;
+        }
+
+        &__set ul {
+            padding-bottom: 70px;
+        }
+    }
+}
+
+@media (min-width: 1920px) {
+    .cyberpunk {
+        .container {
+            min-width: none;
+            max-width: none;
+            padding-inline: 0;
+        }
+
+        &__image {
+            flex: 50%;
+        }
+
+        &__info {
+            flex: 50%;
+        }
+    }
+}

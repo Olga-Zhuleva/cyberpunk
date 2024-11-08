@@ -1,0 +1,15 @@
+.logo a {
+    display: block;
+
+    & > img {
+        width: 200px;
+        height: 50px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .logo a img {
+        width: 100%;
+        height: 100%;
+    }
+}

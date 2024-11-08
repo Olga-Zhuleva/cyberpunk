@@ -1,0 +1,58 @@
+//основные стили страницы
+
+html,
+body {
+	font-family: $font-family;
+	color: $gray-text;
+	font-size: 16px;
+	font-weight: 400;
+}
+
+.container {
+	max-width: 1304px;
+	min-width: 320px;
+	padding: 0 12px;
+	margin: 0 auto;
+}
+
+.wrapper {
+	overflow: hidden;
+}
+
+	/* Очень маленькие экраны (мобильные устройства) */
+	@media only screen and (max-width: 576px) {
+		.container {
+		  width: 100%; /* Настройка макета для полной ширины на маленьких экранах */
+		}
+	  }
+	  
+	  /* Маленькие экраны (планшеты) */
+	  @media only screen and (min-width: 577px) and (max-width: 768px) {
+		.container {
+		  width: 70%; /* Настройка макета для меньшей ширины контейнера на планшетах */
+		}
+	  }
+	  
+	  /* Средние экраны (большие планшеты) */
+	  @media only screen and (min-width: 769px) and (max-width: 1023px) {
+		.container {
+		  width: 80%; /* Настройка макета для умеренной ширины контейнера на больших планшетах */
+		}
+	  }
+	  
+	  /* Большие экраны (настольные компьютеры) */
+	  @media only screen and (min-width: 1024px) and (max-width: 1440px) {
+		.container {
+		  width: 95%; /* Настройка макета для узкой ширины контейнера на настольных компьютерах */
+		}
+	  }
+	  
+	  /* Очень большие экраны (крупные настольные компьютеры) */
+	  @media only screen and (min-width: 1441px) {
+		.container {
+		  width: 100%; /* Настройка макета для еще более узкой ширины контейнера на больших настольных компьютерах */
+		}
+	  }
+
+
+

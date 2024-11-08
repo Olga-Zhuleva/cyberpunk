@@ -1,0 +1,84 @@
+.info-form form {
+    display: flex;
+    flex-direction: column;
+
+    & input {
+        margin-bottom: 37px;
+        height: 33px;
+        border-bottom: 1px solid $gray-text;
+
+        &::placeholder {
+            color: $white;
+            font-family: $font-family;
+            font-size: 16px;
+            font-weight: 300;
+        }
+    }
+    .input__wrapper {
+        position: relative;
+    }
+
+    label {
+        font-size: 12px;
+    }
+
+    .input__screenshot {
+        border: 1px dashed $gray-text;
+        height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    .input__file {
+        position: absolute;
+        margin-bottom: 0;
+        opacity: 0;
+        height: 100% !important;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .btn {
+        color: $primary-color;
+        background-color: $color-accent;
+        margin-top: 36px;
+        margin-bottom: 14px;
+        justify-content: center;
+    }
+
+    .custom-checkbox {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+    }
+
+    .custom-checkbox + label {
+        display: inline-flex;
+        align-items: center;
+        user-select: none;
+    }
+    .custom-checkbox + label::before {
+        content: "";
+        display: inline-block;
+        width: 1em;
+        height: 1em;
+        flex-shrink: 0;
+        flex-grow: 0;
+        border: 1px solid #adb5bd;
+        margin-right: 0.5em;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 50% 50%;
+    }
+
+    .custom-checkbox:checked + label::before {
+        border-color: $gray-text;
+        background-image: url("../img/form/Check.svg");
+        background-size: 16px;
+    }
+}
+
+

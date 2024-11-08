@@ -1,0 +1,65 @@
+.promo {
+    position: relative;
+    margin-bottom: 70px;
+    height: 100%;
+    .swiper {
+        &__item-image img {
+            width: 100%;
+        }
+    }
+
+    &__info {
+        position: absolute;
+        padding-inline: 38px;
+        max-width: 624px;
+        width: 100%;
+        bottom: -50px;
+        background-color: $color-accent;
+        clip-path: polygon(6% 0%, 100% 0, 100% 83%, 93% 100%, 0 100%, 0% 16%);
+        z-index: 3;
+    }
+    &__title {
+        @extend %title-style;
+
+        padding: 30px 0 25px 0;
+        text-align: center;
+    }
+    .btn {
+        margin: 0 auto 30px;
+    }
+}
+
+@media (min-width: 768px) {
+    .promo__info {
+        right: 4%;
+        bottom: 3px;
+    }
+
+    .swiper {
+        padding-bottom: 0;
+        max-height: 1000px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .promo {
+        &__title {
+            padding: 70px 0 25px 38px;
+            text-align: start;
+        }
+
+        &__info {
+            bottom: -1px;
+        }
+
+        .btn {
+            margin: 0 38px 70px;
+        }
+    }
+}
+
+@media (min-width: 1440px) {
+    .promo__info {
+        right: 16%;
+    }
+}

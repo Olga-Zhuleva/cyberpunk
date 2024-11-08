@@ -1,0 +1,16 @@
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 19px 50px;
+    width: 244px;
+    height: 60px;
+    background: $primary-color;
+
+    font-family: $font-family;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 200%;
+    text-align: center;
+    color: $color-accent;
+}
